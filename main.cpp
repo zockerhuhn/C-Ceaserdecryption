@@ -66,7 +66,7 @@ int main()
     {
         messageforprocessing += message[i];
     }
-    caeserdecrypt(messageforprocessing, 1);
+    caeserdecrypt(messageforprocessing, 0);
     for (int i=0; i<26; i++)
     {
         int score = checktext(walloftext[i]);
@@ -79,6 +79,10 @@ int main()
             endresult = walloftext[i];
             bestscore = score;
             bestkey = i+1;
+            if (score >= 10)
+            {
+                break;
+            }
         }
     }
     //std::cout << "most matches (" << bestscore << ") in word(s):  " << caeserdecrypt(message, bestkey, false);
