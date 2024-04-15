@@ -81,5 +81,5 @@ int main()
             bestkey = i+1;
         }
     }
-    std::cout << "most matches (" << bestscore << ") in word(s):  " << caeserdecrypt(message, bestkey, false);
+    //std::cout << "most matches (" << bestscore << ") in word(s):  " << caeserdecrypt(message, bestkey, false);
 }
